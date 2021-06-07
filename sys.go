@@ -9,8 +9,11 @@ import (
 // This type must structurally be a uint64 so that mstats aligns with MemStats.
 type SysMemStat uint64
 
-//go:linkname SysAlloc runtime.sysAlloc
+// SysAlloc allocates unmanaged memory
 func SysAlloc(n uintptr, sysStat *SysMemStat) unsafe.Pointer
 
-//go:linkname SysFree runtime.sysFree
+// SysFree frees memory allocated by SysAlloc
 func SysFree(v unsafe.Pointer, n uintptr, sysStat *SysMemStat)
+
+//go:linkname SysAlloc runtime.sysAlloc
+//go:linkname SysFree runtime.sysFree

@@ -5,6 +5,9 @@ import (
 	"unsafe"
 )
 
+// DumpStruct takes a structure instance v as input and copies the memory to dst.
+//
+// If the size of dst is smaller than the size of v, a new byte slice is allocated.
 func DumpStruct(dst []byte, v interface{}) []byte {
 	srcV := reflect.ValueOf(v)
 

@@ -5,6 +5,7 @@ import (
 	"unsafe"
 )
 
+// CopyStruct copies struct src to dst
 func CopyStruct(dst, src interface{}) {
 	dstV := reflect.ValueOf(dst)
 	srcV := reflect.ValueOf(src)
