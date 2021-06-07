@@ -22,6 +22,7 @@ func main() {
 	fmt.Println("A:", a)
 	fmt.Println("B:", b)
 	libuseful.MemMove(unsafe.Pointer(B.Data), unsafe.Pointer(A.Data), 4)
+	fmt.Println("libuseful.MemMove(B, A, 4)")
 	fmt.Println("A:", a)
 	fmt.Println("B:", b)
 }
