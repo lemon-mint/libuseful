@@ -1,7 +1,6 @@
 package libuseful
 
 import (
-	_ "runtime"
 	"unsafe"
 )
 
