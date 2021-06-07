@@ -12,5 +12,5 @@ func CopyStruct(dst, src interface{}) {
 	dstP := unsafe.Pointer(dstV.Pointer())
 	srcP := unsafe.Pointer(srcV.Pointer())
 
-	MemMove(dstP, srcP, srcV.Elem().Type().Size())
+	MemMove(dstP, srcP, dstV.Elem().Type().Size())
 }
