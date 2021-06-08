@@ -17,3 +17,15 @@ func SysFree(v unsafe.Pointer, n uintptr, sysStat *SysMemStat)
 
 //go:linkname SysAlloc runtime.sysAlloc
 //go:linkname SysFree runtime.sysFree
+
+var libUsefulMemStat SysMemStat
+
+// Alloc allocates unmanaged memory (Calls SysAlloc)
+func Alloc(size uintptr) unsafe.Pointer {
+	return SysAlloc(size, &libUsefulMemStat)
+}
+
+// Free frees memory allocated by Alloc
+func Free(ptr unsafe.Pointer, size uintptr) {
+	SysFree(ptr, size, &libUsefulMemStat)
+}
