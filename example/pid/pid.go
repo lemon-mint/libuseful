@@ -9,12 +9,12 @@ import (
 )
 
 func main() {
-	fmt.Println(libuseful.Getpid())
+	fmt.Println(libuseful.GetPID())
 	var wg sync.WaitGroup
 	wg.Add(100)
 	for i := 0; i < 100; i++ {
 		go func() {
-			fmt.Println(libuseful.Getpid())
+			fmt.Println(libuseful.GetPID())
 			for i := 0; i < 1000; i++ {
 				runtime.Gosched()
 			}
