@@ -42,6 +42,9 @@ func GetGoID() int64 {
 	return *(*int64)(unsafe.Add(g, offset_g_goid))
 }
 
+//go:linkname GetGID GetGoID
+func GetGID() int64
+
 func GetPID() int {
 	p := GetP()
 	return int(*(*int32)(unsafe.Add(p, offset_p_id)))
