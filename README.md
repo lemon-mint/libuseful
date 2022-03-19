@@ -1,5 +1,6 @@
 # libuseful
 [![Go Reference](https://pkg.go.dev/badge/github.com/lemon-mint/libuseful.svg)](https://pkg.go.dev/github.com/lemon-mint/libuseful)
+[![Unsafe 100%](https://img.shields.io/badge/unsafe-100%25-orange)](https://pkg.go.dev/unsafe)
 [![](https://goreportcard.com/badge/github.com/lemon-mint/libuseful)](https://goreportcard.com/report/github.com/lemon-mint/libuseful)
 
 A collection of useful Go "runtime" functions
